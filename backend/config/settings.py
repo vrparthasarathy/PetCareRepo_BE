@@ -84,7 +84,7 @@ DATABASES = {
         "NAME": "localuploadfiledb",
         "USER": "sa",
         "PASSWORD": "Root@123",
-        "HOST": "TIGER02203\\SQL2019",
+        "HOST": "TIGER02203\SQL2019",
         "PORT": "",
         "OPTIONS": {
             "driver": "ODBC Driver 17 for SQL Server",
