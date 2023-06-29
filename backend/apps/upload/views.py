@@ -40,6 +40,8 @@ class UploadFileApiView(APIView):
             return Response(response_data, status=400)
         # data_file = UploadFileDetails.objects.create(file_path=uploaded_file, user_id=str(user_id.id+1))
         file_path = os.path.join('apps/upload/file/', unique_file_name)
+        if not os.path.exists('apps/upload/file/'):
+            os.makedirs('apps/upload/file/')
         with open(file_path, 'wb') as destination:
             for chunk in uploaded_file.chunks():
                 destination.write(chunk)
